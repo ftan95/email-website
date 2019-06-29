@@ -1,21 +1,49 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="container">
+  <div class="row">
 
-<router-outlet></router-outlet>
+    <!--Left Side-->
+    <div class="col" id = "main">
+      <div class="row">
+        <div id = "head" class="col-lg-5 align-items-center d-flex">
+          <img src = "./assets/Apple-logo.jpg" alt = "logo" id = "logo">
+          <p>
+              Frederick Tan  
+              Email
+          </p>
+        </div>
+      </div>
+      
+      <div id = "button" class="row justify-content-center align-items-center d-flex">
+          <button>new message</button>
+      </div>
+
+      <div id = "list" class="row justify-content-left align-items-left d-flex">
+          <ul>
+              <li><i class = "fa fa-inbox"></i> inbox</li>
+              <li><i class = "fa fa-angle-right"></i> draft</li>
+              <li><i class = "fa fa-play"></i>  sent</li>
+              <li><i class = "fa fa-flag"></i>  spam</li>
+              <li><i class = "fa fa-close"></i> trash</li>
+            </ul>
+      </div>
+    </div>
+
+    <!--Right Side-->
+    <div class="col-lg-7">
+      <div class="row d-flex">
+        <div id = "search_bar">
+            <i class = "fa fa-search" id = "search_icon"></i>
+            <input id = "search" type="text" placeholder="search">
+        </div>
+        <div class = "icon"><i class = "fa fa-angle-left"></i></div>
+        <div class = "icon"><i class = "fa fa-angle-double-left"></i></div>
+        <div class = "icon"><i class = "fa fa-angle-right"></i></div>
+        <div class = "icon"><i class = "fa fa-close"></i></div>
+      </div>
+      <div *ngFor = "let c of components">
+          <app-email></app-email>
+      </div>
+      
+    </div>
+  </div>
+</div>
