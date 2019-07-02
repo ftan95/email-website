@@ -40,9 +40,9 @@
         <div class = "icon"><i class = "fa fa-angle-right"></i></div>
         <div class = "icon"><i class = "fa fa-close"></i></div>
       </div>
-      <div *ngFor = "let c of components" (click) = "change()"> 
-          <!-- <i id = "test" class = "fa fa-adjust"></i> -->
-          <app-email [topic] = "usertopic" (mailRead) = "userRead()"></app-email>
+      <!--Standard syntax when generating multiple components with the same template-->
+      <div *ngFor = "let c of components; let i = index"> 
+          <app-email [emailContent]="c" [topic] = "usertopic" (mailRead) = "userRead(i)"></app-email>
       </div>
       
     </div>

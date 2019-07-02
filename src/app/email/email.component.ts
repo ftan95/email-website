@@ -6,6 +6,7 @@ import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
   styleUrls: ['./email.component.scss']
 })
 export class EmailComponent implements OnInit {
+  @Input() emailContent;
 
   @Output() mailRead = new EventEmitter();
 
@@ -17,7 +18,6 @@ export class EmailComponent implements OnInit {
   @Input() topic: string;
 
   read() {
-    console.log('mail read');
     this.mailRead.emit();
   }
 

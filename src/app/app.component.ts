@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EmailListItem } from './EmailListItem';
 
 @Component({
   selector: 'app-root',
@@ -8,13 +9,17 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'email-app';
 
-  components = [1,2,3];
+  // To create each component rather than defining it in the component file - create a class
+  components = [
+    new EmailListItem(),
+    new EmailListItem(),
+    new EmailListItem()
+  ]
 
   public usertopic = "Magic";
 
-  userRead() {
-    let icon = document.getElementById("test") as HTMLElement;
-    icon.style.display = "none";
+  userRead(index: number) {
+    this.components[index].readFlag = true;
   }
 
   onKeydown(event) {
