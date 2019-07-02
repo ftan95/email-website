@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-email',
@@ -7,14 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmailComponent implements OnInit {
 
+  @Output() mailRead = new EventEmitter();
+
   constructor() { }
 
   ngOnInit() {
   }
 
-  clicking() {
-    let test = document.getElementById("read") as HTMLElement;
-    test.style.display = "none";
+  @Input() topic: string;
+
+  read() {
+    console.log('mail read');
+    this.mailRead.emit();
   }
 
 }
