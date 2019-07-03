@@ -48,11 +48,12 @@ button {
     border: none;
     background-color: rgb(236, 234, 234);
     border-radius: 5%;
+    padding-left: 40px;
 }
 
 #search_icon {
-    margin-left: 20px;
-    margin-right: 20px;
+    position: absolute;
+    padding: 6px 10px;
 }
 
 #search_bar {
@@ -60,6 +61,8 @@ button {
     margin-top: 10px;
     background-color: rgb(236, 234, 234);
     border-radius: 5%;
+    margin-bottom: 30px;
+    position: relative;
 }
 
 i {
@@ -70,4 +73,18 @@ i {
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 10px;
+}
+
+.counter {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    position: relative;
+    z-index: 2;
+    border-radius: 10em;
+    padding: 1px 7px;
+    background-color: #fe1212;
+    font-size: 11px;
+    color: #fff;
+    left: auto;
+    top: -2px;
+    left: 5px;
 }

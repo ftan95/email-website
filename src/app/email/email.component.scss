@@ -1,7 +1,17 @@
+#com {
+    display: flex;
+    flex-direction: row;
+}
 #component {
-    margin-top: 30px;
-    margin-left: 20px;
     font-family: 'Courier New', Courier, monospace;
+    text-align: left;
+}
+
+#icon {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 60px;
 }
 
 h5 {

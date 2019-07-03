@@ -14,12 +14,14 @@
       </div>
       
       <div id = "button" class="row justify-content-center align-items-center d-flex">
-          <button>new message</button>
+          <button appButtonColor>new message</button>
       </div>
 
       <div id = "list" class="row justify-content-left align-items-left d-flex">
           <ul>
-              <li><i class = "fa fa-inbox"></i> inbox</li>
+              <li>
+                <i class = "fa fa-inbox"></i>inbox<span class = "counter">22</span>
+              </li>
               <li><i class = "fa fa-angle-right"></i> draft</li>
               <li><i class = "fa fa-play"></i>  sent</li>
               <li><i class = "fa fa-flag"></i>  spam</li>
@@ -31,9 +33,9 @@
     <!--Right Side-->
     <div class="col-lg-7">
       <div class="row d-flex">
-        <div id = "search_bar">
+        <div id = "search_bar" appSearchIcon>
             <i class = "fa fa-search" id = "search_icon"></i>
-            <input id = "search" type="text" placeholder="search" (keydown) = "onKeydown($event)">
+            <input id = "search" type="text" placeholder="search">
         </div>
         <div class = "icon"><i class = "fa fa-angle-left"></i></div>
         <div class = "icon"><i class = "fa fa-angle-double-left"></i></div>
@@ -42,7 +44,7 @@
       </div>
       <!--Standard syntax when generating multiple components with the same template-->
       <div *ngFor = "let c of components; let i = index"> 
-          <app-email [emailContent]="c" [topic] = "usertopic" (mailRead) = "userRead(i)"></app-email>
+          <app-email [emailContent]="c" (mailRead) = "userRead(i)"></app-email>
       </div>
       
     </div>

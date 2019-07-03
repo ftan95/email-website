@@ -15,8 +15,6 @@ export class EmailComponent implements OnInit {
   ngOnInit() {
   }
 
-  @Input() topic: string;
-
   read() {
     this.mailRead.emit();
   }

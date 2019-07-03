@@ -5,5 +5,8 @@ export class EmailListItem {
     readFlag = false;
 
     // use constructor to give unique information to each component
-    constructor() {}
+    constructor(user: string, topic: string) {
+        this.name = user;
+        this.subject = topic;
+    }
 }

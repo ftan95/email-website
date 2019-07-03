@@ -4,15 +4,19 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EmailComponent } from './email/email.component';
+import { ButtonColorDirective } from './button-color.directive';
+import { SearchIconDirective } from './search-icon.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmailComponent
+    EmailComponent,
+    ButtonColorDirective,
+    SearchIconDirective
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
